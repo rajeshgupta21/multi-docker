@@ -13,6 +13,7 @@ services:
     - docker build -t rajeshgupta21/multi-nginx ./nginx
     - docker build -t rajeshgupta21/multi-server ./server
     - docker build -t rajeshgupta21/multi-worker ./worker
+    # Log in Docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
     - docker push rajeshgupta21/multi-client
