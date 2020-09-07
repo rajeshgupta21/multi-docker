@@ -14,7 +14,6 @@ after_success:
   - docker build -t rgupta2165/multi-server ./server
   - docker build -t rgupta2165/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
   - docker push rgupta2165/multi-client
   - docker push rgupta2165/multi-nginx
   - docker push rgupta2165/multi-server
